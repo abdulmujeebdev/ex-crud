@@ -1,5 +1,5 @@
 
-class ColumnTypes {
+export class ColumnTypes {
     static relationships = {
       belongsTo: "belongsTo",
       manyToMany:"belongsToMany",

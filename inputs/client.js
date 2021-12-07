@@ -1,8 +1,8 @@
-const MigrationsGenerator = require("../src/Generators/MigrationsGenerator");
-const { modifiers } = require("../src/Lexers/ColumnTypes");
-MigrationsGenerator.createMigrations([
+return [
   {
     schemaName: "PostTag",
+    is_migration:true,
+    is_model:true,
     definition: {
       columns: [
         {
@@ -16,4 +16,4 @@ MigrationsGenerator.createMigrations([
       ],
     },
   },
-], false);
+]

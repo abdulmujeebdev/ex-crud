@@ -1,22 +1,19 @@
 import { readFile, writeFile } from "../helper";
+import { mapColumns } from "";
 
 export const createMigration = (table) => {
   let migrationStub = prepareStub(table)
-  //Helper function to create file
+  console.log(migrationStub)
 };
 
 export const prepareStub = (table) => {
-  let constraints = "";
-  let mapped_columns = mapColumns(table.definition.columns);
 
   let replacementStubObject = {
-    '"{{class}}"': table.schemaName,
-    '"{{tableName}}"': `"${getTableName(table.schemaName)}"`,
-    '"{{definition}}"': mapped_columns,
-    '"{{constraints}}"': constraints,
+    '__CLASS_NAME__': table.schema_name,
+    '__COLUMNS__': mapColumns(table.columns),
   };
 
-  let migrationStub = validator.replaceFromString(stub, replacementStubObject);
+  let migrationStub = Helper.replaceFromString(stub, replacementStubObject);
   return migrationStub;
 };
 

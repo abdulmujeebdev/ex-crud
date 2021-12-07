@@ -1,22 +1,25 @@
-import {createMigration} from "../services/migration.service"
+import { createMigration } from "../services/migration.service"
+let json_data = [
+  {
+    schema_name: "client",
+    is_migration: true,
+    is_model: true,
+    columns: [
+      {
+        name: "post_id",
+        dataType: "biginteger",
+      },
+      {
+        name: "tag_id",
+        dataType: "biginteger",
+      },
+    ],
+    relationships: []
+  },
+];
 
-class Generator {
-  constructor(data) {
-    this.data = data;
+json_data.forEach((table) => {
+  if (table.is_migration) {
+    createMigration(table);
   }
-
-  index() {
-    this.data.forEach((table) => {
-      if (table.migration_flag) {
-        createMigration(table);
-      }
-      if (table.is_model) {
-      }
-      if (table.is_crud) {
-      }
-      if (table.is_controller) {
-      }
-    });
-  }
-}
-module.exports = DefaultController;
+});

@@ -2,7 +2,7 @@ exports.up = function(db) {
 
     db.createTable( '__CLASS_NAME__',
     {
-      __ATTRIBUTES__
+      __COLUMNS__
     }, callback );
   };
 

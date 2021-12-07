@@ -1,0 +1,12 @@
+{
+  "generators": {
+    "model": "",
+    "migration": "",
+    "controller": ""
+  },
+  "stubs": {
+    "migration": "src/stubs/MigrationStub.js",
+    "model": "src/stubs/ModelStub.js",
+    "controllers": "src/stubs/ControllerStub.js"
+  }
+}

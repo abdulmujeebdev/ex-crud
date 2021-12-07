@@ -1,0 +1,24 @@
+{
+  "name": "flex-crud-gen",
+  "version": "1.0.0",
+  "description": "crud generator",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/appflexion/fyp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/appflexion/fyp/issues"
+  },
+  "homepage": "https://github.com/appflexion/fyp#readme",
+  "dependencies": {
+    "db-migrate": "^1.0.0-beta.16",
+    "fs": "0.0.1-security"
+  }
+}
